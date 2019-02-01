@@ -1,0 +1,90 @@
+int linkerPin = 12; 
+int linkerachterPin = 11;
+int rechterPin = 10;
+int rechterachterPin = 9;
+int middenrechterPin = 8; 
+int middenrechterachterPin = 7;
+int middenlinkerPin = 6;
+int middenlinkerachterPin = 5;
+int knopPin = 3;
+int ledPin = 2;
+int toestandKnop = 0;
+
+
+
+void setup() {
+  pinMode(linkerPin, OUTPUT);
+  pinMode(linkerachterPin, OUTPUT);
+  pinMode(rechterPin, OUTPUT);
+  pinMode(rechterachterPin, OUTPUT);
+  pinMode(middenrechterPin, OUTPUT);
+  pinMode(middenrechterachterPin, OUTPUT);
+  pinMode(middenlinkerPin, OUTPUT);
+  pinMode(middenlinkerachterPin, OUTPUT);
+  pinMode(ledPin, OUTPUT);
+  pinMode(knopPin, INPUT);
+  
+}
+ 
+void loop()
+{
+
+toestandKnop = digitalRead(knopPin);
+if (toestandKnop == HIGH) {
+  digitalWrite(ledPin, HIGH);
+}
+else {
+  digitalWrite(ledPin, LOW);
+}
+  
+  digitalWrite(linkerPin, HIGH);
+  digitalWrite(linkerachterPin, LOW);
+  digitalWrite(rechterPin, LOW);
+  digitalWrite(rechterachterPin, HIGH);
+  digitalWrite(middenrechterPin, HIGH);
+  digitalWrite(middenrechterachterPin, LOW);
+  digitalWrite(middenlinkerPin, HIGH);
+  digitalWrite(middenlinkerachterPin, LOW);
+
+    delay(1000);
+digitalWrite(linkerPin, HIGH);
+digitalWrite(linkerachterPin, LOW);
+digitalWrite(rechterPin, HIGH);
+digitalWrite(rechterachterPin, LOW);
+digitalWrite(middenrechterPin, LOW);
+digitalWrite(middenrechterachterPin, HIGH);
+digitalWrite(middenlinkerPin, HIGH);
+digitalWrite(middenlinkerachterPin, LOW);
+
+delay(1000);
+digitalWrite(linkerPin, HIGH);
+digitalWrite(linkerachterPin, LOW);
+digitalWrite(rechterPin, HIGH);
+digitalWrite(rechterachterPin, LOW);
+digitalWrite(middenrechterPin,HIGH);
+digitalWrite(middenrechterachterPin, LOW);
+digitalWrite(middenlinkerPin, LOW);
+digitalWrite(middenlinkerachterPin, HIGH);
+
+
+
+ delay(1000);
+ digitalWrite(linkerPin, LOW);
+ digitalWrite(linkerachterPin, HIGH);
+digitalWrite(rechterPin, HIGH);
+digitalWrite(rechterachterPin, LOW);
+digitalWrite(middenrechterPin, HIGH);
+digitalWrite(middenrechterachterPin, LOW);
+digitalWrite(middenlinkerPin, HIGH);
+digitalWrite(middenlinkerachterPin, LOW);
+
+
+  
+
+
+
+
+delay(1000);
+
+
+}
